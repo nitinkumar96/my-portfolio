@@ -25,22 +25,6 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
-        <div className="fixed top-[300px] right-0 h-[200px] rounded-l-3xl backdrop-blur-[3px] flex flex-col items-center justify-center">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              className="text-white text-xl m-2"
-            >
-              <img
-                src={link.icon}
-                alt={link.text}
-                className='w-8 h-8 object-contain'
-              />
-            </a>
-          ))}
-        </div>
       </div>
     </BrowserRouter>
   )

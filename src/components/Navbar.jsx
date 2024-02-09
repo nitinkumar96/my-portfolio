@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
-import { navLinks } from '../constants'; 
+import { navLinks, navIcons } from '../constants'; 
 import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
@@ -27,6 +27,20 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
+          {navIcons.map((link) => (
+            <li
+              key={link.text}
+              className={`hover:text-white cursor-pointer items-center flex`}
+            >
+              <a href={`${link.url}`} target="_blank" className='items-center'>
+                <img
+                  src={link.icon}
+                  alt={link.text}
+                  className='w-[20px] hover:w-[25px] h-[20px] hover:h-[25px] object-contain'
+                />
+              </a>
+            </li>
+          ))}
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -50,6 +64,20 @@ const Navbar = () => {
           />
           <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}>
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
+                {navIcons.map((link) => (
+                <li
+                  key={link.text}
+                  className={`hover:text-white cursor-pointer items-center flex`}
+                >
+                  <a href={`${link.url}`} target="_blank" className='items-center'>
+                    <img
+                      src={link.icon}
+                      alt={link.text}
+                      className='w-[20px] h-[20px] object-contain'
+                    />
+                  </a>
+                </li>
+              ))}
               {navLinks.map((link) => (
                 <li
                   key={link.id}

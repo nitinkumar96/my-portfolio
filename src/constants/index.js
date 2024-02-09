@@ -23,8 +23,18 @@ import {
     mysql,
     handgesture,
     solvemydoubt,
+    linkedin,
+    github,
+    leetcode,
+    codeforces,
   } from "../assets";
   
+  export const navIcons = [
+    { text: 'github', icon: github, url: 'https://github.com/nitinkumar96' },
+    { text: 'linkedin', icon: linkedin, url: 'https://www.linkedin.com/in/nitinkumar96/' },
+    { text: 'codeforces', icon: codeforces, url: 'https://codeforces.com/profile/nitinkumar96' },
+    { text: 'leetcode', icon: leetcode, url: 'https://leetcode.com/pointbreak96/' },
+  ];
 
   export const navLinks = [
     {
